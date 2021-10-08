@@ -1,13 +1,10 @@
 package sfgpetclinic.services;
 
+
 import sfgpetclinic.model.Vet;
 
-import java.util.Set;
 
-public interface Vetservice {
-    Vet findById(Long id);
 
-    Vet save(Vet pet);
+public interface Vetservice extends CrudService<Vet, Long> {
 
-    Set<Vet> findAll();
 }
