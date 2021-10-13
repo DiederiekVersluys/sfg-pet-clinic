@@ -4,8 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import sfgpetclinic.model.Owner;
 import sfgpetclinic.model.Vet;
-import sfgpetclinic.services.Map.OwnerServiceMap;
-import sfgpetclinic.services.Map.VetServiceMap;
 import sfgpetclinic.services.OwnerService;
 import sfgpetclinic.services.Vetservice;
 
