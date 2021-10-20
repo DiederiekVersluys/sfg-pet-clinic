@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import sfgpetclinic.model.Vet;
 import sfgpetclinic.repositories.VetRepository;
-import sfgpetclinic.services.SpecialtiesService;
+
 import sfgpetclinic.services.Vetservice;
 
 import java.util.HashSet;

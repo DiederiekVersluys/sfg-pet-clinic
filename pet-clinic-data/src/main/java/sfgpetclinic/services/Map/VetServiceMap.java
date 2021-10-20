@@ -33,12 +33,17 @@ public class VetServiceMap extends AbstractServiceMap<Vet, Long> implements Vets
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Vet save(Vet object) throws Exception {
 
         if(object.getSpecialties().size()>0){
             object.getSpecialties().forEach(specialty -> {
                 if (specialty.getId() == null) {
-                    Specialty savedSpecialty = specialtiesService.save(specialty);
+                    Specialty savedSpecialty = null;
+                    try {
+                        savedSpecialty = specialtiesService.save(specialty);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     specialty.setId(savedSpecialty.getId());
                 }
             });
