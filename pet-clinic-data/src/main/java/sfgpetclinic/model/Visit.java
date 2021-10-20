@@ -1,9 +1,6 @@
 package sfgpetclinic.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 @Entity
 @Table(name = "visits")
@@ -13,7 +10,7 @@ public class Visit extends BaseEntity{
     @Column(name ="description")
     private String description;
     @ManyToOne
-    @Column(name = "pet_id")
+    @JoinColumn(name = "pet_id")
     private Pet pet;
 
     public LocalDate getDate() {
