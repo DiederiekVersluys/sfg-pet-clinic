@@ -7,7 +7,7 @@ public interface CrudService <T, ID>{
 
     T findById(ID id);
 
-    T save(T object);
+    T save(T object) throws Exception;
 
     void delete(T object);
 

@@ -11,7 +11,7 @@ import sfgpetclinic.services.Petservice;
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final Petservice petservice;
 
